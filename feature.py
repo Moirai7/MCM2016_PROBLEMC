@@ -22,9 +22,6 @@ if __name__ == '__main__':
 		pass
 
 	school_id = {}
-
-	max = []
-	min = []
 	
 	for ar in filenames :
 		year = start_year+1
@@ -37,8 +34,6 @@ if __name__ == '__main__':
 			for l in line:
 				lists.append(0)
 				lists_name.append(l)
-				max.append(-999999999)
-				min.append(999999999)
 			check = True
 
 		all_value = {}
@@ -54,10 +49,6 @@ if __name__ == '__main__':
 					all_value[lists_name[l]] = line[l]#TODO
 					try:
 						temp = float(line[l]) if '.' in line[l] else int(line[l])
-						if temp>max[l]:
-							max[l] = temp
-						if temp<min[l]:
-							min[l] = temp
 					except:
 						import traceback
 						traceback.print_exc() 
